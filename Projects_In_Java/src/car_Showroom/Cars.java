@@ -12,7 +12,7 @@ public class Cars extends Showroom implements Utility {
 
 	@Override
 	public void getDetails() {
-		 System.out.println("NAME is:  "+car_name);
+		 System.out.println("NAME :  "+car_name);
 	        System.out.println("COLOR: "+car_color);
 	        System.out.println("FUEL TYPE: "+car_fuel_type);
 	        System.out.println("PRICE: "+car_price);
