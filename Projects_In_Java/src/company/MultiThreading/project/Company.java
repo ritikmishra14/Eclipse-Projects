@@ -1,9 +1,11 @@
 package company.MultiThreading.project;
 
 public class Company {
-	int n;
-	boolean state=true;
-	synchronized public void produce_item(int n) {
+	int count;
+	boolean state=false;
+//	 Produce Item method.
+	synchronized public void produce_item(int count) {
+//		this.count=count;
 		if(state) {
 			try {
 				wait();
@@ -12,11 +14,14 @@ public class Company {
 				e.printStackTrace();
 			}
 		}
-		this.n=n;
-		System.out.println("Produced: "+ n);
-		state=false;
+		this.count=count;
+		System.out.println("Produced: "+ count);
+		System.out.println("*************");
+		state=true;
 		notify();
 	}
+	
+//	consumed item method.
 	
 	synchronized public int consume_item() {
 		if(!state) {
@@ -27,10 +32,12 @@ public class Company {
 				e.printStackTrace();
 			}
 		}
-		System.out.println("Consumed: "+ n);
-		state=true;
+		
+		System.out.println("Consumed: "+ this.count);
+		System.out.println("*************");
+		state=false;
 		notify();
-		return n;
+		return count;
 	}
 
 }

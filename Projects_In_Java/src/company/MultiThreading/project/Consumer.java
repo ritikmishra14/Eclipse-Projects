@@ -1,13 +1,14 @@
 package company.MultiThreading.project;
 
-public class Consumer extends Thread {
+public class Consumer implements Runnable {
 	Company c;
+	String name;
 	public Consumer(Company c) {
 		this.c=c;
 	}
 public void run() {
-	int i=1;
-	while(i<100) {
+
+	while(true) {
 		this.c.consume_item();
 		try{
 			Thread.sleep(1000);
@@ -15,7 +16,7 @@ public void run() {
 		catch(Exception e) {
 			System.out.println(e);
 		}
-		i++;
+		
 	}
 	
 }
