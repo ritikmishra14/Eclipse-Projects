@@ -39,7 +39,7 @@ public class Showroom implements Utility{
 		System.out.println("Cars in stock: ");
 		 cars_in_stock=sc.nextInt();
 		 
-		 System.out.println("Showroom details added successfully");
+		 System.out.println("*********Showroom details added successfully*********");
 		
 		
 		
