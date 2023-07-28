@@ -58,11 +58,10 @@ public Cars() {
 	}
 	@Override
 	public void getDetails() {
-<<<<<<< HEAD
-		 System.out.println("NAME is car:  "+car_name);
-=======
-		 System.out.println("NAME :  "+car_name);
->>>>>>> projectSrc
+
+		    System.out.println("NAME is car:  "+car_name);
+            System.out.println("NAME :  "+car_name);
+
 	        System.out.println("COLOR: "+car_color);
 	        System.out.println("FUEL TYPE: "+car_fuel_type);
 	        System.out.println("PRICE: "+car_price);
